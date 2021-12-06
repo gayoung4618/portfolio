@@ -1,0 +1,984 @@
+@charset 'utf-8';
+@import url('fonts/font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto regular', 'Nanum Gothic', 'BCcardL', sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* 공통사항 */
+.container {
+    position: relative;
+    display: block;
+    max-width: 130rem;
+    height: 97rem;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* fix menu 관련 */
+
+.fix-menu {
+    position: fixed;
+    right: -22rem;
+    top: 3rem;
+
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 99999;
+    transition: right 0.2s;
+}
+
+.fix-menu-active {
+    right: 5rem;
+}
+
+.bt-menu {
+    color: #17ae8c;
+    font-size: 4rem;
+}
+
+.fix-wrap {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    width: 38%;
+    height: 100%;
+    background-color: #dbf9ec;
+    z-index: 9999;
+    padding: 14rem 7.4rem;
+}
+
+.fix-wrap-active {
+    left: 62%;
+}
+
+.bt-close {
+    position: absolute;
+    top: 7rem;
+    right: 10rem;
+    font-size: 4rem;
+    color: #1ac09b;
+    text-align: right;
+    cursor: pointer;
+}
+
+.fix-gnb li {
+    width: 74%;
+    height: auto;
+    padding-left: 1.7rem;
+    margin-bottom: 5.9rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.fix-gnb li a {
+    font-size: 2.8rem;
+    color: #1ac09b;
+    font-weight: 600;
+    line-height: 1.85;
+}
+
+.fix-gnb li:hover {
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+
+/* // fix-menu */
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+/* 상단 */
+.header {
+    position: relative;
+    display: block;
+    background-color: #dbf9ec;
+    border-bottom: 0.1rem solid #17ae8c;
+    height: 8.5rem;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 999;
+}
+
+.header .container {
+    position: relative;
+    display: block;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.logo {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0;
+    display: block;
+    width: 4rem;
+    height: 4.1rem;
+    background: url('../images/logo.png') no-repeat center;
+    background-size: cover;
+}
+
+.gnb {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.gnb>li {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.gnb>li>a {
+    font-size: 1.7rem;
+    color: #1ac09b;
+    font-family: 'Roboto Medium', sans-serif;
+    text-transform: uppercase;
+    line-height: 5;
+    margin-left: 4.7rem;
+}
+
+.gnb>li>a::before {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 2.35rem;
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.5rem;
+    visibility: hidden;
+    transition: visibility 0.1s;
+    z-index: -1;
+}
+
+.gnb>li>a:hover::before {
+    visibility: visible;
+}
+
+/* // 상단 */
+
+/* 비주얼 */
+.visual {
+    position: relative;
+    display: block;
+    background-color: #dbf9ec;
+}
+
+.visual>.container {
+    position: relative;
+    text-align: center;
+}
+
+.visual h1 {
+    font-size: 6rem;
+    min-width: 85.9rem;
+    white-space: nowrap;
+    margin: 0;
+    color: transparent;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+.visual h1::before {
+    content: '2022 Portfolio leegayeong';
+    position: absolute;
+    bottom: 1.6rem;
+    left: 1.3rem;
+    width: 100%;
+    height: 1005;
+    color: #17ae8c;
+    font-family: 'Roboto Bold', sans-serif;
+    overflow: hidden;
+    border-right: 0.1rem solid #17ae8c;
+    animation: typing 10s 5s steps(31) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/* // 비주얼 */
+
+/* 프로필 */
+.profile {
+    position: relative;
+    display: block;
+    background-color: #1ac09b;
+}
+
+.profile>.container {
+    position: relative;
+    display: block;
+}
+
+.title {
+    font-size: 5rem;
+    color: #17ae8c;
+    font-family: 'Roboto Bold', sans-serif;
+    line-height: 1;
+    letter-spacing: 0.4rem;
+    text-align: center;
+}
+
+.pro-tit {
+    color: #e6f9f6;
+    padding-top: 5.8rem;
+    margin-bottom: 6.5rem;
+}
+
+.pro-wrap {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.pro-left {
+    float: left;
+    padding-left: 3.9rem;
+}
+
+.pro-img {
+    width: 27rem;
+    height: 27rem;
+    background-color: #aaa;
+    background: url('../images/profile_img.jpg') no-repeat center;
+    background-size: cover;
+    border: 0.9rem solid #e6f9f6;
+    border-radius: 50%;
+    margin-bottom: 5.8rem;
+    margin-left: 4.4rem;
+}
+
+.pro-box {
+    position: relative;
+    display: block;
+    margin-left: 1rem;
+}
+
+.pro-box::before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 56rem;
+    height: 0.1rem;
+    background: #ecf8f6;
+    margin-bottom: 3.3rem;
+}
+
+.pro-box>div {
+    padding-left: 1.5rem;
+}
+
+.pro-box h4 {
+    color: #f1fcfa;
+    font-family: 'Roboto regular', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+
+.pro-box p {
+    font-size: 1.3rem;
+    color: #f1fcfa;
+    font-family: 'Roboto regular', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+}
+
+.pro-box p:last-child {
+    margin-bottom: 0;
+}
+
+.pro-box span {
+    font-size: 1.3rem;
+    color: #ecf8f6;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.about-me {
+    margin-bottom: 4.8rem;
+}
+
+.about-me::before {
+    width: 24rem;
+}
+
+.about-me span {
+    font-size: 1.4rem;
+    padding-left: 3.6rem;
+}
+
+.about-me p:last-child span {
+    padding-left: 3rem;
+    text-transform: lowercase;
+}
+
+.like::before {
+    width: 42rem;
+}
+
+.like h4 {
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.like-things {
+    display: inline-block;
+    font-size: 1.3rem;
+    line-height: 9rem;
+    text-align: center;
+
+    width: 9rem;
+    height: 9rem;
+    border: 0.1rem solid #ecf8f6;
+    border-radius: 50%;
+
+    margin-right: 6rem;
+}
+
+.like-things:last-child {
+    margin-right: 0;
+}
+
+.pro-right {
+    float: right;
+    padding-top: 4.5rem;
+    padding-right: 5rem;
+}
+
+.education {
+    margin-bottom: 6.9rem;
+}
+
+.education span {
+    padding-left: 5.9rem;
+}
+
+.education p {
+    margin-bottom: 3.9rem;
+}
+
+.education p:nth-child(2) span {
+    padding-left: 5.3rem
+}
+
+.skills {
+    position: relative;
+    display: block;
+}
+
+.skill-wrap {
+    position: relative;
+    display: block;
+}
+
+.skill-wrap ul {
+    overflow: hidden;
+}
+
+.skill-wrap ul li {
+    float: left;
+    width: 33%;
+    height: 14.8rem;
+    text-align: center;
+    padding-right: 3.4rem;
+}
+
+.skill-wrap ul li:nth-child(3) {
+    /* padding-right: 0; */
+}
+
+.skill-title {
+    font-size: 1.5rem;
+    color: #ecf8f6;
+    font-family: 'Roboto Regular', sans-serif;
+}
+
+.skill-cont {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    margin-bottom: 1.8rem;
+}
+
+.progressbar-text {
+    color: #ecf8f6 !important;
+}
+
+/* // 프로필 */
+/* I AM */
+.i-am {
+    position: relative;
+    display: block;
+    padding-top: 11rem;
+}
+
+.i-am .container {
+    position: relative;
+}
+
+.i-am-tit {
+    position: absolute;
+    bottom: 50.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 16.3rem;
+    height: 9.4rem;
+    background-color: #fff;
+    line-height: 1.88;
+    z-index: 9;
+}
+
+.i-am-box {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    height: auto;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.i-am-box-1 {
+    border: 0.3rem solid #1ac09b;
+}
+
+.i-am-box-4 {
+    border: 0.3rem solid #fbd26f;
+}
+
+.i-am-box p {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'BCcardL', sans-serif;
+}
+
+.i-am-box>p>span {
+    line-height: 1.73;
+}
+
+.i-am-box-1 p {
+    margin-bottom: 5.5rem;
+}
+
+.i-am-box-1 p:first-child {
+    margin-bottom: 4.5rem;
+}
+
+.i-am-box-1 p:last-child {
+    margin-bottom: 0;
+}
+
+.i-am-box-2 {
+    font-size: 1.6rem;
+    line-height: 1.625;
+    padding: 16.4rem 0;
+}
+
+.i-am-box-3 {
+    line-height: 1.625;
+    font-size: 1.6rem;
+    padding: 21rem 0;
+}
+
+.i-am-box-4 p {
+    margin-bottom: 4.5rem;
+}
+
+.i-am-box-4 p:last-child {
+    margin-bottom: 0;
+}
+
+/* IAM */
+/* 퍼블리싱 */
+.publ {
+    position: relative;
+    display: block;
+}
+
+.publ::before {
+    content: '';
+    position: absolute;
+    bottom: 49rem;
+    left: -16.3rem;
+    width: 50rem;
+    height: 50rem;
+    border: 5rem solid #e6f9f6;
+    border-radius: 50%;
+    /* background: url('../images/publ_bg01.png') no-repeat center; */
+}
+
+.publ::after {
+    content: '';
+    position: absolute;
+    bottom: -6.9rem;
+    right: -13rem;
+    width: 40rem;
+    height: 40rem;
+    border: 5rem solid #c7eddd;
+    border-radius: 50%;
+    z-index: -1;
+    /* background: url('../images/publ_bg02.png') no-repeat center; */
+}
+
+.publ>.container {
+    position: relative;
+    display: block;
+}
+
+.publ-wrap {
+    display: block;
+    position: relative;
+}
+
+.publ-tit {
+    padding-top: 19rem;
+    padding-bottom: 12.4rem;
+    text-align: left;
+}
+
+.publ-warp {
+    position: absolute;
+    bottom: 20rem;
+    right: -15rem;
+    width: 100%;
+    height: auto;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.publ-box {
+    width: 51.3rem;
+    height: 40rem;
+    overflow: hidden;
+    background: url("http://placehold.it/510x400");
+}
+
+.publ-link-bg {
+    float: right;
+    width: 23rem;
+    height: 100%;
+    background-color: rgba(236, 230, 219, 0.7);
+    text-align: center;
+
+}
+
+.publ-box h3 {
+    font-size: 3rem;
+    color: #0f2902;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    line-height: 1;
+}
+
+.publ-box p {
+    font-size: 1.4rem;
+    color: #000;
+    font-family: 'BCcardL', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.publ-box p:nth-child(4) {
+    margin-bottom: 3rem;
+}
+
+.publ-box a {
+    display: inline-block;
+    width: 17rem;
+    background-color: #033d41;
+    border-radius: 2rem;
+
+    color: #ecf8f6;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 4rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s;
+}
+
+.publ-box a:hover {
+    color: #033d41;
+    background-color: #ecf8f6;
+}
+
+.publ-sidiz {
+    background: url('../images/publ_sidiz.png') no-repeat center;
+}
+
+.publ-stx {
+    background: url('../images/publ_stx.png') no-repeat center;
+}
+
+.publ-sony {
+    background: url('../images/publ_sony.webp') no-repeat center;
+    background-size: auto 100%;
+}
+
+.publ-nexus {
+    background: url('../images/publ_nexus.jpg') no-repeat center;
+    background-size: auto 100%;
+}
+
+.sw-publ-control {
+    position: absolute;
+    bottom: 0;
+    left: -11rem;
+    display: block;
+    font-size: 0;
+    z-index: 9;
+}
+
+.slide-bt {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    background-color: #17ae8c;
+    border: none;
+
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.75;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.slide-bt:hover {
+    background-color: #087e63;
+}
+
+.sw-publ-next {
+    margin-left: 0.5rem;
+}
+
+/* // 퍼블리싱 */
+
+/* 디자인 */
+.design {
+    position: relative;
+    display: block;
+}
+
+.design::before {
+    content: '';
+    position: absolute;
+    bottom: -10.6rem;
+    left: 0;
+    width: 80rem;
+    height: 108rem;
+    background-color: #eafbf5;
+}
+
+.design-tit {
+    padding-top: 13.5rem;
+    padding-bottom: 13.4rem;
+    text-align: right;
+}
+
+.design-warp {
+    position: absolute;
+    bottom: 26.5rem;
+    left: -10rem;
+    width: 100%;
+    height: auto;
+}
+
+.sw-design {
+    width: 100%;
+    height: 100%;
+}
+
+.design-box {
+    width: 51.3rem;
+    height: 40rem;
+    overflow: hidden;
+    background-color: #aaa;
+}
+
+.design-box p {
+    font-size: 1.4rem;
+    color: #000;
+    font-family: 'BCcardL', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.design-box p:nth-child(4) {
+    margin-bottom: 3rem;
+}
+
+.design-link-bg {
+    float: right;
+    width: 23rem;
+    height: 100%;
+    background-color: rgba(236, 230, 219, 0.7);
+    text-align: center;
+}
+
+.design-box h3 {
+    font-size: 3rem;
+    color: #0f2902;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    line-height: 1;
+}
+
+.design-box a {
+    display: inline-block;
+    width: 17rem;
+    background-color: #033d41;
+    border-radius: 2rem;
+
+    color: #ecf8f6;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 4rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.2s;
+}
+
+.design-box a:hover {
+    color: #033d41;
+    background-color: #ecf8f6;
+}
+
+.design-tour {
+    background: url('../images/design_tour.png') no-repeat center;
+}
+
+.design-port {
+    background: url('../images/design_port.png') no-repeat center;
+    background-size: 100% auto;
+    background-position: 25% 28%;
+}
+
+.sw-design-control {
+    position: absolute;
+    bottom: 0;
+    right: -10rem;
+    display: block;
+    font-size: 0;
+    z-index: 9;
+}
+
+.sw-design-next {
+    margin-left: 0.5rem;
+}
+
+/* // 디자인 */
+/* 라이프 */
+.life {
+    position: relative;
+    display: block;
+}
+
+.life::before {
+    content: '';
+    position: absolute;
+    bottom: 37.5rem;
+    right: 28.7rem;
+    display: block;
+    width: 125rem;
+    height: 59.5rem;
+    border: 5rem solid #b0e4ce;
+    box-sizing: border-box;
+    /* visibility: hidden; */
+}
+
+.life>.container {
+    width: 113.5rem;
+}
+
+.life-tit {
+    padding-top: 5.9rem;
+    padding-bottom: 9rem;
+}
+
+.life-wrap {
+    display: grid;
+    grid-template-rows: repeat(10, 10rem);
+    grid-template-columns: repeat(10, 10rem);
+    gap: 1.5rem;
+}
+
+.life-item {
+    border: 0.2rem solid #333;
+    
+}
+
+.life-item p {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.3;
+}
+
+.life-item-01 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background: url('../images/life_01.jpg') no-repeat center;
+    background-size: cover;
+
+}
+
+.life-item-02 {
+    grid-column: 3/6;
+    grid-row: 1/4;
+    background: url('../images/life_02.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.life-item-03 {
+    grid-column: 6/8;
+    grid-row: 1/4;
+    padding: 5rem 1.5rem;
+}
+
+.life-item-03 p:nth-child(2) {
+    margin-bottom: 2rem;
+}
+
+.life-item-04 {
+    grid-column: 8/11;
+    grid-row: 1/3;
+    background: url('../images/life_04.jpg') no-repeat center;
+    background-size: cover;
+    background-position-y: 100%;
+}
+
+.life-item-05 {
+    grid-column: 1/3;
+    grid-row: 3/6;
+    background: url('../images/life_05.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.life-item-06 {
+    grid-column: 3/6;
+    grid-row: 4/6;
+    padding: 5.5rem 2rem;
+}
+
+.life-item-07 {
+    grid-column: 6/8;
+    grid-row: 4/6;
+    background: url('../images/life_07.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.life-item-08 {
+    grid-column: 8/11;
+    grid-row: 3/6;
+    background: url('../images/life_08.jpg') no-repeat center;
+    background-size: cover;
+}
+
+
+
+
+/* // 라이프 */
+/* 연락 */
+.contact {
+    position: relative;
+    display: block;
+    background-color: #17b08e;
+}
+
+.contact>.container {
+    height: 50rem;
+    text-align: center;
+}
+
+.contact>.container>p {
+    font-size: 1.5rem;
+    color: #f6f6f6;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.copy {
+    font-size: 1.7rem;
+    padding: 3rem 0;
+}
+
+.qr {
+    display: inline-block;
+    width: 20rem;
+    height: 20rem;
+    background: url('../images/openchat.png') no-repeat center;
+    background-size: contain;
+}
+
+.contact>.container>p:last-child {
+    padding-top: 1.5rem;
+}
+
+
+/* // 연락 */
