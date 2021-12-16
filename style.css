@@ -297,6 +297,7 @@ h1 {
     position: relative;
     display: block;
     background-color: #1ac09b;
+    z-index: 9;
 }
 
 .profile>.container {
@@ -799,6 +800,12 @@ h1 {
 
     .i-am-box-3 {
         padding: 17rem 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .i-am {
+        display: none;
     }
 }
 
