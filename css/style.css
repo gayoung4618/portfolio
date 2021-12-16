@@ -56,7 +56,8 @@ h1 {
 .fix-menu {
     position: fixed;
     right: -22rem;
-    top: 3rem;
+    /* top: 3rem; */
+    top: 3.09%;
 
     border: 0;
     background-color: transparent;
@@ -199,6 +200,28 @@ h1 {
     visibility: visible;
 }
 
+@media screen and (max-width:1320px) {
+    .fix-menu {
+        right: 3%;
+    }
+
+    .bt-menu {
+        font-size: 3.5rem;
+    }
+
+    .header {
+        height: 7rem;
+    }
+
+    .logo {
+        left: 3%;
+    }
+
+    .gnb {
+        display: none;
+    }
+}
+
 /* // 상단 */
 
 /* 비주얼 */
@@ -254,6 +277,19 @@ h1 {
     }
 }
 
+@media screen and (max-width: 1300px) {
+
+    .visual>.container {
+        height: 100vh;
+    }
+
+    .visual h1 {
+        font-size: 5vw;
+        min-width: 72vw;
+    }
+
+}
+
 /* // 비주얼 */
 
 /* 프로필 */
@@ -297,7 +333,6 @@ h1 {
 .pro-img {
     width: 27rem;
     height: 27rem;
-    background-color: #aaa;
     background: url('../images/profile_img.jpg') no-repeat center;
     background-size: cover;
     border: 0.9rem solid #e6f9f6;
@@ -358,7 +393,7 @@ h1 {
 }
 
 .about-me::before {
-    width: 24rem;
+    width: 25rem;
 }
 
 .about-me span {
@@ -386,6 +421,8 @@ h1 {
     line-height: 9rem;
     text-align: center;
 
+    /* width: 4.7vw; */
+    /* height: 4.7vw; */
     width: 9rem;
     height: 9rem;
     border: 0.1rem solid #ecf8f6;
@@ -408,16 +445,12 @@ h1 {
     margin-bottom: 6.9rem;
 }
 
-.education span {
-    padding-left: 5.9rem;
-}
-
 .education p {
     margin-bottom: 3.9rem;
 }
 
-.education p:nth-child(2) span {
-    padding-left: 5.3rem
+.education span:first-child {
+    padding-left: 5.9rem;
 }
 
 .skills {
@@ -463,6 +496,133 @@ h1 {
     color: #ecf8f6 !important;
 }
 
+/* @media screen and (min-width:768px) and (max-width:1024px) { */
+@media screen and (max-width:1088px) {
+
+    .profile>.container {
+        height: 100%;
+        padding-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .pro-tit {
+        padding-top: 5rem;
+        margin-bottom: 6rem;
+    }
+
+    .pro-left {
+        width: 50vw;
+    }
+
+    .pro-img {
+        width: 23rem;
+        height: 23rem;
+        border: 0.6rem solid #e6f9f6;
+        margin-top: 2.5rem;
+    }
+
+    .pro-box::before {
+        width: 100%;
+    }
+
+    .pro-box h4 {
+        font-size: 1.7rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-me::before {
+        width: 24rem;
+    }
+
+    .like::before {
+        width: 29rem;
+    }
+
+    .like-things {
+        line-height: 6.5rem;
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-right: 4rem;
+    }
+
+    .pro-right {
+        width: 50vw;
+    }
+
+    .education {
+        margin-bottom: 4rem;
+    }
+
+    .education p {
+        margin-bottom: 3.9rem;
+    }
+
+    .education p span:first-child {
+        padding-left: 4rem;
+    }
+
+    .education p span:nth-child(2) {
+        padding-left: 8.2rem;
+    }
+
+    .skills h4 {
+        margin-bottom: 3.6rem;
+    }
+
+    .skill-title {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1088px) {
+    .education p span:nth-child(2) {
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .pro-tit {
+        padding-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .pro-left {
+        float: none;
+        width: 100vw;
+        padding: 0 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .pro-img {
+        border: 0.4rem solid #e6f9f6;
+        margin: 2rem auto;
+    }
+
+    .pro-box::before {
+        width: 100%;
+    }
+
+    .pro-right {
+        float: none;
+        padding: 0 2rem;
+        width: 100vw;
+    }
+}
+/* max width 640px */
+@media screen and (max-width: 330px) {
+    .like-things {
+        margin-right: 2rem;
+    }
+}
 /* // 프로필 */
 /* I AM */
 .i-am {
@@ -551,6 +711,97 @@ h1 {
     margin-bottom: 0;
 }
 
+@media screen and (max-width: 1300px) {
+    .i-am {
+        margin: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .i-am {
+        padding-top: 7rem;
+    }
+
+    .i-am .container {
+        height: 90rem;
+    }
+
+    .i-am-tit {
+        font-size: 3.8rem;
+        bottom: 49%;
+        width: 13rem;
+        height: 8rem;
+        line-height: 8rem;
+    }
+
+    .i-am-box {
+        padding: 4rem 1rem;
+    }
+
+    .i-am-box p {
+        font-size: 1.4rem;
+        word-break: keep-all;
+        line-height: 1.5;
+    }
+
+    .i-am-box-1 p {
+        margin-bottom: 4rem;
+    }
+
+    .i-am-box-1 p:first-child {
+        margin-bottom: 3.5rem;
+    }
+
+    .i-am-box-2 {
+        padding: 14rem 1rem;
+    }
+
+    .i-am-box-3 {
+        padding: 17rem 1rem;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .i-am .container {
+        height: 90rem;
+    }
+
+    .i-am-tit {
+        font-size: 3.8rem;
+        bottom: 49%;
+        width: 13rem;
+        height: 8rem;
+        line-height: 8rem;
+    }
+
+    .i-am-box {
+        padding: 4rem 1rem;
+        float: none;
+    }
+
+    .i-am-box p {
+        font-size: 1.2rem;
+        word-break: keep-all;
+        line-height: 1.5;
+    }
+
+    .i-am-box-1 p {
+        margin-bottom: 4rem;
+    }
+
+    .i-am-box-1 p:first-child {
+        margin-bottom: 3.5rem;
+    }
+
+    .i-am-box-2 {
+        padding: 14rem 1rem;
+    }
+
+    .i-am-box-3 {
+        padding: 17rem 1rem;
+    }
+}
+
 /* IAM */
 /* 퍼블리싱 */
 .publ {
@@ -567,7 +818,6 @@ h1 {
     height: 50rem;
     border: 5rem solid #e6f9f6;
     border-radius: 50%;
-    /* background: url('../images/publ_bg01.png') no-repeat center; */
 }
 
 .publ::after {
@@ -580,7 +830,6 @@ h1 {
     border: 5rem solid #c7eddd;
     border-radius: 50%;
     z-index: -1;
-    /* background: url('../images/publ_bg02.png') no-repeat center; */
 }
 
 .publ>.container {
@@ -595,11 +844,10 @@ h1 {
 
 .publ-tit {
     padding-top: 19rem;
-    padding-bottom: 12.4rem;
     text-align: left;
 }
 
-.publ-warp {
+.publ-wrap {
     position: absolute;
     bottom: 20rem;
     right: -15rem;
@@ -612,14 +860,15 @@ h1 {
     height: 100%;
 }
 
-.publ-box {
+.work-box {
     width: 51.3rem;
     height: 40rem;
     overflow: hidden;
     background: url("http://placehold.it/510x400");
+    border-radius: 0.5rem;
 }
 
-.publ-link-bg {
+.work-link-bg {
     float: right;
     width: 23rem;
     height: 100%;
@@ -628,7 +877,7 @@ h1 {
 
 }
 
-.publ-box h3 {
+.work-box h3 {
     font-size: 3rem;
     color: #0f2902;
     font-weight: 400;
@@ -638,18 +887,18 @@ h1 {
     line-height: 1;
 }
 
-.publ-box p {
+.work-box p {
     font-size: 1.4rem;
     color: #000;
     font-family: 'BCcardL', sans-serif;
     margin-bottom: 1rem;
 }
 
-.publ-box p:nth-child(4) {
+.work-box p:nth-child(4) {
     margin-bottom: 3rem;
 }
 
-.publ-box a {
+.work-box a {
     display: inline-block;
     width: 17rem;
     background-color: #033d41;
@@ -663,7 +912,7 @@ h1 {
     transition: all 0.3s;
 }
 
-.publ-box a:hover {
+.work-box a:hover {
     color: #033d41;
     background-color: #ecf8f6;
 }
@@ -718,6 +967,54 @@ h1 {
     margin-left: 0.5rem;
 }
 
+@media screen and (max-width: 1439px) {
+    .publ::before {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    .publ::after {
+        width: 35rem;
+        height: 35rem;
+        opacity: 0.7;
+    }
+
+    .publ>.container {
+        height: 80rem;
+    }
+
+    .publ-tit {
+        padding-top: 5rem;
+        padding-left: 5rem;
+    }
+
+    .publ-wrap {
+        right: -15%;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+
+    .sw-publ {
+        width: 50%;
+    }
+
+    .sw-publ-control {
+        left: 13%;
+    }
+
+}
+
+@media screen and (max-width: 1030px) {
+    .publ::after {
+        display: none;
+    }
+
+    .work-link-bg {
+        float: left;
+    }
+}
+
 /* // 퍼블리싱 */
 
 /* 디자인 */
@@ -742,7 +1039,7 @@ h1 {
     text-align: right;
 }
 
-.design-warp {
+.design-wrap {
     position: absolute;
     bottom: 26.5rem;
     left: -10rem;
@@ -753,61 +1050,6 @@ h1 {
 .sw-design {
     width: 100%;
     height: 100%;
-}
-
-.design-box {
-    width: 51.3rem;
-    height: 40rem;
-    overflow: hidden;
-    background-color: #aaa;
-}
-
-.design-box p {
-    font-size: 1.4rem;
-    color: #000;
-    font-family: 'BCcardL', sans-serif;
-    margin-bottom: 1rem;
-}
-
-.design-box p:nth-child(4) {
-    margin-bottom: 3rem;
-}
-
-.design-link-bg {
-    float: right;
-    width: 23rem;
-    height: 100%;
-    background-color: rgba(236, 230, 219, 0.7);
-    text-align: center;
-}
-
-.design-box h3 {
-    font-size: 3rem;
-    color: #0f2902;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-    line-height: 1;
-}
-
-.design-box a {
-    display: inline-block;
-    width: 17rem;
-    background-color: #033d41;
-    border-radius: 2rem;
-
-    color: #ecf8f6;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 4rem;
-    margin-bottom: 2.5rem;
-    transition: all 0.2s;
-}
-
-.design-box a:hover {
-    color: #033d41;
-    background-color: #ecf8f6;
 }
 
 .design-tour {
@@ -833,6 +1075,40 @@ h1 {
     margin-left: 0.5rem;
 }
 
+@media screen and (max-width: 1439px) {
+
+    .design::before {
+        bottom: 20%;
+        left: 0;
+        width: 65vw;
+        height: 80%;
+    }
+
+    .design>.container {
+        height: 80rem;
+    }
+
+    .design-tit {
+        padding: 0 5rem;
+    }
+
+    .design-wrap {
+        left: -15%;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    .sw-design {
+        width: 50%;
+    }
+
+    .sw-design-control {
+        bottom: 0;
+        right: 13%;
+    }
+
+}
+
 /* // 디자인 */
 /* 라이프 */
 .life {
@@ -855,6 +1131,7 @@ h1 {
 
 .life>.container {
     width: 113.5rem;
+
 }
 
 .life-tit {
@@ -871,7 +1148,7 @@ h1 {
 
 .life-item {
     border: 0.2rem solid #333;
-    
+
 }
 
 .life-item p {
@@ -941,8 +1218,60 @@ h1 {
     background-size: cover;
 }
 
+@media screen and (max-width: 1135px) {
+    .life::before {
+        bottom: 26rem;
+    }
 
+    .life>.container {
+        width: 100vw;
+        height: 85rem;
+    }
 
+    .life-tit {
+        width: 100vw;
+    }
+
+    .life-wrap {
+        position: absolute;
+        top: 18rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        grid-template-rows: repeat(10, 8rem);
+        grid-template-columns: repeat(10, 8rem);
+        gap: 1.2rem;
+    }
+
+    .life-item p {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .life-wrap {
+        grid-template-rows: repeat(10, 6rem);
+        grid-template-columns: repeat(10, 6rem);
+        gap: 1rem;
+    }
+
+    .life-item-06 {
+        padding: 2.5rem 2rem;
+    }
+
+    .life-item-03 {
+        padding: 1rem 0.5rem;
+    }
+
+    .life-item p {
+        line-height: 1.2;
+    }
+
+    .life-item-03 p:nth-child(2) {
+        margin-bottom: 1rem;
+    }
+}
 
 /* // 라이프 */
 /* 연락 */
@@ -970,8 +1299,10 @@ h1 {
 
 .qr {
     display: inline-block;
-    width: 20rem;
-    height: 20rem;
+    /* width: 20rem; */
+    width: 20vw;
+    height: 20vw;
+    /* height: 20rem; */
     background: url('../images/openchat.png') no-repeat center;
     background-size: contain;
 }

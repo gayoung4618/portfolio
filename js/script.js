@@ -11,10 +11,10 @@ window.onload = function () {
     //화면이동
     let screen_index = 0; // 현재 보이는 화면 번호
     let screen_move_active = true; // 휠 움직임 가능 true
-    $(window).bind('mousewheel DOMMouseScroll', function(event){
+    $(window).bind('mousewheel DOMMouseScroll', function (event) {
         let distance = event.originalEvent.wheelDelta;
-        
-        if(distance == null){
+
+        if (distance == null) {
             distance - event.originalEvent.detail * -1;
         }
     })
@@ -54,7 +54,7 @@ window.onload = function () {
     }, )
 
     // progressbar
-    function skill_bar (id, per){
+    function skill_bar(id, per) {
         let bar = new ProgressBar.Circle(id, {
             color: '#ecf8f6',
             strokeWidth: 4,
@@ -76,7 +76,7 @@ window.onload = function () {
             step: function (state, circle) {
                 circle.path.setAttribute('stroke', state.color);
                 circle.path.setAttribute('stroke-width', state.width);
-    
+
                 var value = Math.round(circle.value() * 100);
                 if (value === 0) {
                     circle.setText('');
@@ -90,31 +90,35 @@ window.onload = function () {
         bar.animate(per)
     }
 
-    let profile_pos = $('.profile').offset().top;    
+    let profile_pos = $('.profile').offset().top;
     let pro_chk = false; // 다시 생기는거 방지
     $(window).scroll(function () {
         let sc_y = $(window).scrollTop();
-        
-        if (sc_y >= profile_pos-200) {
-            if(pro_chk == true)return;
+
+        if (sc_y >= profile_pos - 200) {
+            if (pro_chk == true) return;
             skill_bar("#skill_html", 0.9)
             skill_bar("#skill_css", 0.9),
-            skill_bar("#skill_jquery",0.85)
+                skill_bar("#skill_jquery", 0.85)
             skill_bar("#skill_js", 0.75)
             skill_bar("#skill_photoshop", 0.85)
-            skill_bar("#skill_illust", 0.70)         
+            skill_bar("#skill_illust", 0.70)
             pro_chk = true
-        } 
+        }
     })
     // --progressbar
 
     // publ swiper관련
     let sw_publ = new Swiper('.sw-publ', {
-        slidesPerView: 2,
-        spaceBetween: 164,
+        breakpoints: {
+            1440: {
+                spaceBetween: 164,
+                slidesPerView: 2,
+            }           
+        },
         loop: true,
         autoplay: {
-            delay: 2000,
+            delay: 2500,
             disableOnInteraction: false
         },
         navigation: {
@@ -131,11 +135,15 @@ window.onload = function () {
 
     // design swiper관련
     let sw_design = new Swiper('.sw-design', {
-        slidesPerView: 2,
-        spaceBetween: 164,
+        breakpoints: {
+            1440: {
+                spaceBetween: 164,
+                slidesPerView: 2,
+            },           
+        },
         loop: true,
         autoplay: {
-            delay: 2000,
+            delay: 2500,
             disableOnInteraction: false
         },
         navigation: {
@@ -150,21 +158,6 @@ window.onload = function () {
         sw_design.autoplay.start();
     });
 
-    // life swiper 관련
-    let sw_life = new Swiper('.sw-life', {
-        slidesPerView: 4,
-        spaceBetween: 0,
-        loop: true,
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false
-        }
-    });
-    $('.sw-life').mouseover(function () {
-        sw_life.autoplay.stop();
-    });
-    $('.sw-life').mouseleave(function () {
-        sw_life.autoplay.start();
-    });
+
 
 };
