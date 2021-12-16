@@ -79,21 +79,21 @@ h1 {
     position: fixed;
     left: 100%;
     top: 0;
-    width: 38%;
+    width: 50%;
     height: 100%;
     background-color: #dbf9ec;
     z-index: 9999;
-    padding: 14rem 7.4rem;
+    padding: 10rem 5rem;
 }
 
 .fix-wrap-active {
-    left: 62%;
+    left: 50%;
 }
 
 .bt-close {
     position: absolute;
     top: 7rem;
-    right: 10rem;
+    right: 6rem;
     font-size: 4rem;
     color: #1ac09b;
     text-align: right;
@@ -297,6 +297,7 @@ h1 {
     position: relative;
     display: block;
     background-color: #1ac09b;
+    z-index: 9;
 }
 
 .profile>.container {
@@ -497,7 +498,7 @@ h1 {
 }
 
 /* @media screen and (min-width:768px) and (max-width:1024px) { */
-@media screen and (max-width:1088px) {
+@media screen and (max-width:1100px) {
 
     .profile>.container {
         height: 100%;
@@ -514,7 +515,8 @@ h1 {
     }
 
     .pro-left {
-        width: 50vw;
+        width: 49vw;
+        padding-left: 0;
     }
 
     .pro-img {
@@ -549,7 +551,8 @@ h1 {
     }
 
     .pro-right {
-        width: 50vw;
+        width: 49vw;
+        padding-right: 0;
     }
 
     .education {
@@ -565,7 +568,7 @@ h1 {
     }
 
     .education p span:nth-child(2) {
-        padding-left: 8.2rem;
+        /* padding-left: 8.2rem; */
     }
 
     .skills h4 {
@@ -617,12 +620,12 @@ h1 {
         width: 100vw;
     }
 }
-/* max width 640px */
 @media screen and (max-width: 330px) {
     .like-things {
         margin-right: 2rem;
     }
 }
+/* max width 640px */
 /* // 프로필 */
 /* I AM */
 .i-am {
@@ -799,6 +802,12 @@ h1 {
 
     .i-am-box-3 {
         padding: 17rem 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .i-am {
+        display: none;
     }
 }
 
@@ -1000,7 +1009,7 @@ h1 {
     }
 
     .sw-publ-control {
-        left: 13%;
+        left: 4.5rem;
     }
 
 }
@@ -1104,7 +1113,7 @@ h1 {
 
     .sw-design-control {
         bottom: 0;
-        right: 13%;
+        right: 4.5rem;
     }
 
 }
